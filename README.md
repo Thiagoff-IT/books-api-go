@@ -6,3 +6,4 @@ Problema a ser resolvido com este projeto
 Requisitos:
 
 - Como usuário eu gostaria de cadastrar um livro.
+- Como usuário eu gostaria de atualizar um livro.
