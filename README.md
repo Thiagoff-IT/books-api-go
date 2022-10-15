@@ -10,3 +10,5 @@ Requisitos:
 - Como usuário eu gostaria de listar um livro.
 - Como usuário eu gostaria de listar todos os livros.
 - Como usuário eu gostaria de deletar um livro.
+
+Os livros devem ter:
