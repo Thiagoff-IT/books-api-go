@@ -12,3 +12,9 @@ Requisitos:
 - Como usuário eu gostaria de deletar um livro.
 
 Os livros devem ter:
+```
+- Título
+- Categoria.
+- Autor.
+- Sinopse.
+```
