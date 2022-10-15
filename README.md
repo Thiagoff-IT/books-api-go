@@ -7,3 +7,4 @@ Requisitos:
 
 - Como usuário eu gostaria de cadastrar um livro.
 - Como usuário eu gostaria de atualizar um livro.
+- Como usuário eu gostaria de listar um livro.
