@@ -1,4 +1,4 @@
-# Api Go
+# API Rest de Gerenciamento de Livros em Go
 
 Problema a ser resolvido com este projeto
 - desenvolva uma API Rest que contemple os livros de um usuário.
