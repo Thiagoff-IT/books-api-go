@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"strconv"
+	"strings"
 
 	"github.com/gorilla/mux"
 
@@ -28,6 +29,11 @@ func (h *LivroHandler) CriarLivro(w http.ResponseWriter, r *http.Request) {
 	var livro model.Livro
 	if err := json.NewDecoder(r.Body).Decode(&livro); err != nil {
 		response.Erro(w, http.StatusBadRequest, "corpo da requisição inválido")
+		return
+	}
+
+	if erros := livro.Validar(); len(erros) > 0 {
+		response.Erro(w, http.StatusBadRequest, "campos obrigatórios faltando: "+strings.Join(erros, ", "))
 		return
 	}
 
@@ -73,6 +79,11 @@ func (h *LivroHandler) AtualizarLivro(w http.ResponseWriter, r *http.Request) {
 	var livro model.Livro
 	if err := json.NewDecoder(r.Body).Decode(&livro); err != nil {
 		response.Erro(w, http.StatusBadRequest, "corpo da requisição inválido")
+		return
+	}
+
+	if erros := livro.Validar(); len(erros) > 0 {
+		response.Erro(w, http.StatusBadRequest, "campos obrigatórios faltando: "+strings.Join(erros, ", "))
 		return
 	}
 
